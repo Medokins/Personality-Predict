@@ -21,10 +21,10 @@ def list_all_words(personality):
     return allWords
 
 text = " ".join(list_all_words("I"))
-introverts = Counter(text.split()).most_common(11)
+introverts = Counter(text.split()).most_common(12)[2:]
 
 text = " ".join(list_all_words("E"))
-extroverts = Counter(text.split()).most_common(11)
+extroverts = Counter(text.split()).most_common(12)[2:]
 
 print(f"Intoverts: {introverts}")
 print(f"Extoverts: {extroverts}")
