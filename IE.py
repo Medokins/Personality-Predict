@@ -16,15 +16,15 @@ for i in range(len(data['type'])):
 
 def list_all_words(personality):
     allWords = []
-    stopwords = ["like"]
-
     for i in range(len(post_dict[personality])):
-        words = post_dict.get(personality)[i].split()
-        words = [w for w in words if w not in stopwords]
-        allWords = allWords + words
+        allWords += [post_dict.get(personality)[i]]
     return allWords
 
 text = " ".join(list_all_words("I"))
-introverts = Counter(text.split()).most_common(10)
+introverts = Counter(text.split()).most_common(11)
+
+text = " ".join(list_all_words("E"))
+extroverts = Counter(text.split()).most_common(11)
 
 print(f"Intoverts: {introverts}")
+print(f"Extoverts: {extroverts}")
