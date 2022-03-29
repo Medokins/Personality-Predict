@@ -13,7 +13,7 @@ if IE == True:
         else:
             return "E"
 
-    data['type'] = data["type"].apply(classify)
+    data["type"] = data["type"].apply(classify)
     data.to_csv("Datasets/IEclassification.csv")
 
 if NS == True:
@@ -21,9 +21,9 @@ if NS == True:
         if "N" in x:
             return "N"
         else:
-            return "s"
+            return "S"
 
-    data['type'] = data["type"].apply(classify)
+    data["type"] = data["type"].apply(classify)
     data.to_csv("Datasets/NSclassification.csv")
 
 if TF == True:
@@ -33,7 +33,7 @@ if TF == True:
         else:
             return "F"
 
-    data['type'] = data["type"].apply(classify)
+    data["type"] = data["type"].apply(classify)
     data.to_csv("Datasets/TFclassification.csv")
 
 if JP == True:
@@ -43,5 +43,5 @@ if JP == True:
         else:
             return "P"
 
-    data['type'] = data["type"].apply(classify)
+    data["type"] = data["type"].apply(classify)
     data.to_csv("Datasets/JPclassification.csv")
