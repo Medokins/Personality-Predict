@@ -75,19 +75,26 @@ if create_IE_dict == True:
             allWords += words
         return allWords
 
+
     text = " ".join(list_all_words("I"))
     introverts = Counter(text.split()).most_common(500)
     for word in introverts:
         introverts_dict[word[0]] = [word[1]]
     introverts_df = pd.DataFrame.from_dict(introverts_dict)
     introverts_df = introverts_df.T
+    introverts_df.columns = ["count"]
+    count = introverts_df["count"].sum()
+    introverts_df["count"] =  introverts_df["count"].div(count)
     introverts_df.to_csv("Datasets/introverts_df.csv")
 
 
     text = " ".join(list_all_words("E"))
-    extroverts = Counter(text.split()).most_common(100)
+    extroverts = Counter(text.split()).most_common(500)
     for word in extroverts:
         extroverts_dict[word[0]] = [word[1]]
     extroverts_df = pd.DataFrame.from_dict(extroverts_dict)
     extroverts_df = extroverts_df.T
+    extroverts_df.columns = ["count"]
+    count = extroverts_df["count"].sum()
+    extroverts_df["count"] =  extroverts_df["count"].div(count)
     extroverts_df.to_csv("Datasets/extroverts_df.csv")
