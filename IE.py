@@ -60,6 +60,6 @@ def evaluate_IE(post, extroverts_words, introverts_words, extrovert_df, introver
     if extrovert_score > introvert_score: return "E"
     else: return "I"
 
-print(evaluate_IE(post_0, extroverts_words, introverts_words, extroverts_dict, introverts_dict)) #I
-print(evaluate_IE(post_1, extroverts_words, introverts_words, extroverts_dict, introverts_dict)) #I
-print(evaluate_IE(post_2, extroverts_words, introverts_words, extroverts_dict, introverts_dict)) #E
+# print(evaluate_IE(post_0, extroverts_words, introverts_words, extroverts_dict, introverts_dict)) #I
+# print(evaluate_IE(post_1, extroverts_words, introverts_words, extroverts_dict, introverts_dict)) #I
+# print(evaluate_IE(post_2, extroverts_words, introverts_words, extroverts_dict, introverts_dict)) #E

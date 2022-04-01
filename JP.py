@@ -58,6 +58,6 @@ def evaluate_JP(post, perceiving_words, judging_words, perceiving_df, judging_df
     if perceiving_score > judging_score: return "P"
     else: return "J"
 
-print(evaluate_JP(post_0, perceiving_words, judging_words, perceiving_dict, judging_dict)) #J
-print(evaluate_JP(post_1, perceiving_words, judging_words, perceiving_dict, judging_dict)) #P
-print(evaluate_JP(post_2, perceiving_words, judging_words, perceiving_dict, judging_dict)) #P  this one it gets wrong
+# print(evaluate_JP(post_0, perceiving_words, judging_words, perceiving_dict, judging_dict)) #J
+# print(evaluate_JP(post_1, perceiving_words, judging_words, perceiving_dict, judging_dict)) #P
+# print(evaluate_JP(post_2, perceiving_words, judging_words, perceiving_dict, judging_dict)) #P  this one it gets wrong

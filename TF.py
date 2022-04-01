@@ -34,7 +34,6 @@ def evaluate_TF(post, thinking_words, feeling_words, thinking_df, feeling_df):
     if thinking_score > feeling_score: return "T"
     else: return "F"
 
-print(evaluate_TF(post_0, thinking_words, feeling_words, thinking_dict, feeling_dict)) #T
-print(evaluate_TF(post_1, thinking_words, feeling_words, thinking_dict, feeling_dict)) #F
-print(evaluate_TF(post_2, thinking_words, feeling_words, thinking_dict, feeling_dict)) #T
-
+# print(evaluate_TF(post_0, thinking_words, feeling_words, thinking_dict, feeling_dict)) #T
+# print(evaluate_TF(post_1, thinking_words, feeling_words, thinking_dict, feeling_dict)) #F
+# print(evaluate_TF(post_2, thinking_words, feeling_words, thinking_dict, feeling_dict)) #T

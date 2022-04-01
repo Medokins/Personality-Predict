@@ -34,8 +34,6 @@ def evaluate_NS(post, intuition_words, sensing_words, intuition_df, sensing_df):
     if intuition_score > sensing_score: return "N"
     else: return "S"
 
-print(evaluate_NS(post_0, intuition_words, sensing_words, intuition_dict, sensing_dict)) #N
-print(evaluate_NS(post_1, intuition_words, sensing_words, intuition_dict, sensing_dict)) #S this one is wrong
-print(evaluate_NS(post_2, intuition_words, sensing_words, intuition_dict, sensing_dict)) #S
-
-
+# print(evaluate_NS(post_0, intuition_words, sensing_words, intuition_dict, sensing_dict)) #N
+# print(evaluate_NS(post_1, intuition_words, sensing_words, intuition_dict, sensing_dict)) #S this one is wrong
+# print(evaluate_NS(post_2, intuition_words, sensing_words, intuition_dict, sensing_dict)) #S
