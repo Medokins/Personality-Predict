@@ -1,27 +1,40 @@
 import pandas as pd
-from collections import Counter
 
-data = pd.read_csv("Datasets/TFclassification.csv")
+thinking_dict = pd.read_csv("Datasets/thinking_df.csv")
+feeling_dict = pd.read_csv("Datasets/feeling_df.csv")
 
-#first I want to get most frequent words in T/F classification
-post_dict = {}
-for i in range(len(data['type'])):
-    if data['type'][i] not in post_dict:
-        post_dict[data['type'][i]] = [data['posts'][i]]
-    else:
-        post_dict[data['type'][i]].append(data['posts'][i])
+thinking_dict.columns = ["word", "score"]
+feeling_dict.columns = ["word", "score"]
 
-def list_all_words(personality):
-    allWords = []
-    for i in range(len(post_dict[personality])):
-        allWords += [post_dict.get(personality)[i]]
-    return allWords
+thinking_words = thinking_dict["word"].tolist()
+feeling_words = feeling_dict["word"].tolist()
 
-text = " ".join(list_all_words("T"))
-thinking = Counter(text.split()).most_common(14)[4:]
+#Thinking post
+post_0 = "sure ego check except immature intjs painfully slow developmentally potential chart know sure whether ego legitimate would caution put every intj"
 
-text = " ".join(list_all_words("F"))
-feeling = Counter(text.split()).most_common(14)[4:]
+#Feeling post
+post_1 = "uncontrollable emotion conquer believe also commonly say type help grind people let go fear get ready dive depth mind trust friend help pull back problem solve interest kind sad journey"
 
-print(f"Thinking: {thinking}")
-print(f"Feeling: {feeling}")
+#Thinking post
+post_2 = "content thread see similarity say focus wrong part statement case ask end evil ask powerful point would cross mind tear entire city thus harm"
+
+def evaluate(post, thinking_words, feeling_words, thinking_df, feeling_df):
+    thinking_score = 0
+    feeling_score = 0
+    for word in post.split():
+        if word in thinking_words:    
+            thinking_score += thinking_df.loc[thinking_df["word"] == word]["score"].tolist()[0]
+        if word in feeling_words:
+            feeling_score += feeling_df.loc[feeling_df["word"] == word]["score"].tolist()[0]
+    
+
+    print("Thinking: ", thinking_score, end = "  |  ")
+    print("Feeling: ", feeling_score)
+
+    if thinking_score > feeling_score: return "T"
+    else: return "F"
+
+print(evaluate(post_0, thinking_words, feeling_words, thinking_dict, feeling_dict)) #T
+print(evaluate(post_1, thinking_words, feeling_words, thinking_dict, feeling_dict)) #F
+print(evaluate(post_2, thinking_words, feeling_words, thinking_dict, feeling_dict)) #T
+
