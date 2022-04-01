@@ -45,7 +45,7 @@ post_2 = "mbti uncanny valley astrology change format make palatable keep intern
         thing tell word assign know word mean thus leave dust interrupt people ask explain say seem work decently maybe entp thing advice go straight\
         forward ask meredith say seek harmonize selfishly like want conflict people argue care much two question sure mean clarify intp like flair say"
 
-def evaluate(post, extroverts_words, introverts_words, extrovert_df, introvert_df):
+def evaluate_IE(post, extroverts_words, introverts_words, extrovert_df, introvert_df):
     extrovert_score = 0
     introvert_score = 0
     for word in post.split():
@@ -60,6 +60,6 @@ def evaluate(post, extroverts_words, introverts_words, extrovert_df, introvert_d
     if extrovert_score > introvert_score: return "E"
     else: return "I"
 
-print(evaluate(post_0, extroverts_words, introverts_words, extroverts_dict, introverts_dict)) #I
-print(evaluate(post_1, extroverts_words, introverts_words, extroverts_dict, introverts_dict)) #I
-print(evaluate(post_2, extroverts_words, introverts_words, extroverts_dict, introverts_dict)) #E
+print(evaluate_IE(post_0, extroverts_words, introverts_words, extroverts_dict, introverts_dict)) #I
+print(evaluate_IE(post_1, extroverts_words, introverts_words, extroverts_dict, introverts_dict)) #I
+print(evaluate_IE(post_2, extroverts_words, introverts_words, extroverts_dict, introverts_dict)) #E

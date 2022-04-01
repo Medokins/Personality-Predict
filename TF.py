@@ -18,7 +18,7 @@ post_1 = "uncontrollable emotion conquer believe also commonly say type help gri
 #Thinking post
 post_2 = "content thread see similarity say focus wrong part statement case ask end evil ask powerful point would cross mind tear entire city thus harm"
 
-def evaluate(post, thinking_words, feeling_words, thinking_df, feeling_df):
+def evaluate_TF(post, thinking_words, feeling_words, thinking_df, feeling_df):
     thinking_score = 0
     feeling_score = 0
     for word in post.split():
@@ -34,7 +34,7 @@ def evaluate(post, thinking_words, feeling_words, thinking_df, feeling_df):
     if thinking_score > feeling_score: return "T"
     else: return "F"
 
-print(evaluate(post_0, thinking_words, feeling_words, thinking_dict, feeling_dict)) #T
-print(evaluate(post_1, thinking_words, feeling_words, thinking_dict, feeling_dict)) #F
-print(evaluate(post_2, thinking_words, feeling_words, thinking_dict, feeling_dict)) #T
+print(evaluate_TF(post_0, thinking_words, feeling_words, thinking_dict, feeling_dict)) #T
+print(evaluate_TF(post_1, thinking_words, feeling_words, thinking_dict, feeling_dict)) #F
+print(evaluate_TF(post_2, thinking_words, feeling_words, thinking_dict, feeling_dict)) #T
 

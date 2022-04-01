@@ -42,7 +42,7 @@ post_2 = "fulfil cheat good situation pretend everythings great side note ton pe
         attainable desire get far define need stuff consider important let work relationship actively try meet people wait hop right person come along latter true urge revisit\
         lifelong relationship one specific thing actually know want forgo act seek one abstract possibility good job good city good look strange make say nah good wait get serious"
 
-def evaluate(post, perceiving_words, judging_words, perceiving_df, judging_df):
+def evaluate_JP(post, perceiving_words, judging_words, perceiving_df, judging_df):
     perceiving_score = 0
     judging_score = 0
     for word in post.split():
@@ -58,6 +58,6 @@ def evaluate(post, perceiving_words, judging_words, perceiving_df, judging_df):
     if perceiving_score > judging_score: return "P"
     else: return "J"
 
-print(evaluate(post_0, perceiving_words, judging_words, perceiving_dict, judging_dict)) #J
-print(evaluate(post_1, perceiving_words, judging_words, perceiving_dict, judging_dict)) #P
-print(evaluate(post_2, perceiving_words, judging_words, perceiving_dict, judging_dict)) #P  this one it gets wrong
+print(evaluate_JP(post_0, perceiving_words, judging_words, perceiving_dict, judging_dict)) #J
+print(evaluate_JP(post_1, perceiving_words, judging_words, perceiving_dict, judging_dict)) #P
+print(evaluate_JP(post_2, perceiving_words, judging_words, perceiving_dict, judging_dict)) #P  this one it gets wrong

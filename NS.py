@@ -18,7 +18,7 @@ post_1 = "like spring feel energetic season whatever reason also sit outside fir
 #Sensing post
 post_2 = "say abusive holy shit sound like si sound like even though relate lol might worth simply list gender"
 
-def evaluate(post, intuition_words, sensing_words, intuition_df, sensing_df):
+def evaluate_NS(post, intuition_words, sensing_words, intuition_df, sensing_df):
     intuition_score = 0
     sensing_score = 0
     for word in post.split():
@@ -34,8 +34,8 @@ def evaluate(post, intuition_words, sensing_words, intuition_df, sensing_df):
     if intuition_score > sensing_score: return "N"
     else: return "S"
 
-print(evaluate(post_0, intuition_words, sensing_words, intuition_dict, sensing_dict)) #N
-print(evaluate(post_1, intuition_words, sensing_words, intuition_dict, sensing_dict)) #S this one is wrong
-print(evaluate(post_2, intuition_words, sensing_words, intuition_dict, sensing_dict)) #S
+print(evaluate_NS(post_0, intuition_words, sensing_words, intuition_dict, sensing_dict)) #N
+print(evaluate_NS(post_1, intuition_words, sensing_words, intuition_dict, sensing_dict)) #S this one is wrong
+print(evaluate_NS(post_2, intuition_words, sensing_words, intuition_dict, sensing_dict)) #S
 
 
