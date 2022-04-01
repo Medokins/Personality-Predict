@@ -13,7 +13,7 @@ feeling_words = feeling_dict["word"].tolist()
 post_0 = "sure ego check except immature intjs painfully slow developmentally potential chart know sure whether ego legitimate would caution put every intj"
 
 #Feeling post
-post_1 = "uncontrollable emotion conquer believe also commonly say type help grind people let go fear get ready dive depth mind trust friend help pull back problem solve interest kind sad journey"
+post_1 = "uncontrollable emotion conquer believe also commonly say type help grind people let go fear get ready dive depth mind trust friend help pull"
 
 #Thinking post
 post_2 = "content thread see similarity say focus wrong part statement case ask end evil ask powerful point would cross mind tear entire city thus harm"
