@@ -13,7 +13,7 @@ JP = False
 
 create_IE_dict = False
 create_NS_dict = False
-create_TF_dict = True
+create_TF_dict = False
 create_JP_dict = False
 
 if IE == True:
