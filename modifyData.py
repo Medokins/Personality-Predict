@@ -16,6 +16,25 @@ create_NS_dict = False
 create_TF_dict = False
 create_JP_dict = False
 
+def prepare_post(post):
+
+    cleared_post = []
+    
+    words = post.split(" ")
+    words = [w for w in words if w not in stopwords]    
+    cleared_post +=  words
+    cleared_post = ' '.join(str(x) for x in cleared_post)
+
+    cleared_post = cleared_post.replace(".","")
+    cleared_post = cleared_post.replace("'","")
+    cleared_post = cleared_post.replace(",","")
+    cleared_post = cleared_post.replace(":","")
+    cleared_post = cleared_post.replace(";","")
+    cleared_post = cleared_post.replace("!","")
+    cleared_post = cleared_post.replace("?","")
+    
+    return cleared_post
+
 if IE == True:
     def classify(x):
         if "I" in x:
